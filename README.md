@@ -1,8 +1,8 @@
-# ============= LANDING PAGE LPK KUBOU GENIUS =============
+# LANDING PAGE LPK KUBOU GENIUS
 tools : 
 - ReactJS
 - Three JS
 
 
-# made by Kubou IT Team
+Made by Kubou IT Team @2025
 # Inspired by wawa sensei
