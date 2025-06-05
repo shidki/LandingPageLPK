@@ -2,7 +2,7 @@
 tools : 
 - ReactJS
 - Three JS
-
+- poly piza for 3d model
 
 Made by Kubou IT Team @2025
-# Inspired by wawa sensei
+    <small>Ini adalah tulisan kecil</small>
