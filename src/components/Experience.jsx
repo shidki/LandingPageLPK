@@ -2,15 +2,15 @@
 
 import { Float, Html, Line, OrbitControls, PerspectiveCamera, Text, useScroll } from "@react-three/drei";
 import { Background } from "./Background";
-import { Airplane } from "./Airplane";
+import { Airplane } from "./3DComponent/Airplane";
 import { useMemo, useRef, useState, useEffect } from "react";
-import { Cloud } from "./Cloud";
+import { Cloud } from "./3DComponent/Cloud";
 import * as THREE from "three"
 import { useFrame, useThree } from "@react-three/fiber";
-import { Torii_Gate } from "./Torii_Gate";
-import { Pagoda } from "./Pagoda";
-import { TextSection } from "./TextSection";
-import { Sakura } from "./Sakura";
+import { Torii_Gate } from "./3DComponent/Torii_Gate";
+import { Pagoda } from "./3DComponent/Pagoda";
+import { TextSection } from "./3DComponent/TextSection";
+import { Sakura } from "./3DComponent/Sakura";
 
 export const Experience = () => {
   const curvePoints = useMemo(() => [
@@ -476,7 +476,7 @@ export const Experience = () => {
           <mesh
             ref={buttonRef}
             onClick={() => {
-              window.location.href = 'https://kubougenius.com';
+              window.location.href = '/home';
             }}
             onPointerEnter={() => setIsHovered(true)}
             onPointerLeave={() => setIsHovered(false)}

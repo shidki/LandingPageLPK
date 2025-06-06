@@ -5,4 +5,6 @@ tools :
 - poly piza for 3d model
 
 Made by Kubou IT Team @2025
-    <small>Ini adalah tulisan kecil</small>
+
+
+3D ideas Inspired by wawa sensei
