@@ -1,4 +1,4 @@
-// EXPERIENCE.JSX - FIXED VERSION
+// EXPERIENCE.JSX - FIXED ROUTING VERSION
 
 import { Float, Html, Line, OrbitControls, PerspectiveCamera, Text, useScroll } from "@react-three/drei";
 import { Background } from "./Background";
@@ -142,6 +142,25 @@ export const Experience = () => {
     console.log("handleStartJourney called!");
     setHasStarted(true);
     setIsAutoScrolling(true);
+  };
+
+  // FIXED: Function untuk navigate ke home page
+  const handleGoToMainPage = () => {
+    console.log("Navigating to home page...");
+    
+    // OPSI 1: Jika menggunakan React Router
+    // import { useNavigate } from 'react-router-dom';
+    // const navigate = useNavigate();
+    // navigate('/home');
+    
+    // OPSI 2: Jika home page adalah root/home page
+    window.location.href = '/home';
+    
+    // OPSI 3: Jika menggunakan specific route
+    // window.location.href = '/home';
+    
+    // OPSI 4: Jika same dohome tapi different page
+    // window.location.href = window.location.origin + '/home';
   };
 
   // Prevent scroll until button clicked
@@ -432,26 +451,6 @@ export const Experience = () => {
               >
                 START JOURNEY
               </Text>
-              
-              {/* Instructions - positioned relative to button text */}
-              {/* <Text 
-                font="./fonts/DMSerifDisplay-Regular.ttf" 
-                textAlign="center" 
-                color="white" 
-                anchorX="center"
-                anchorY="middle" 
-                fontSize={
-                  window.innerWidth < 480 ? 0.06 :  // Very small
-                  window.innerWidth < 644 ? 0.07 :  // Small phones  
-                  window.innerWidth < 1024 ? 0.06 :  // Small phones  
-                  0.06  // Default
-                } 
-                maxWidth={50}
-                position={[0, -0.11, 0.35]}
-                fillOpacity={0.8}
-              >
-                Klik Tombol!
-              </Text> */}
             </group>
           </group>
         </>
@@ -475,9 +474,7 @@ export const Experience = () => {
         <group position={[0, -1.2, 0]}>
           <mesh
             ref={buttonRef}
-            onClick={() => {
-              window.location.href = '/home';
-            }}
+            onClick={handleGoToMainPage}
             onPointerEnter={() => setIsHovered(true)}
             onPointerLeave={() => setIsHovered(false)}
             scale={isHovered ? [1.05, 1.05, 1.05] : [1, 1, 1]}
